@@ -8,7 +8,7 @@ import StudentDashboardImage from '../../../assets/PROJECT/WebDesign/Student_Das
 import BlurImage from '../../../assets/Blur.png';
 import Button2 from '../../../components/Button2.jsx';
 import MockupStudentDashboard from '../../../assets/PROJECT/WebDesign/Mockup_StudentDashboard.png';
-import VideoStudentDash from '../../../assets/PROJECT/WebDesign/Video_StudentDash.mp4';
+
 import { useNavigate } from 'react-router-dom';
 import './Design.css';
 
@@ -270,30 +270,37 @@ const Design2 = () => {
               boxShadow: hover ? '0 0 20px 0 rgba(171,40,250,0.4)' : 'none',
             }}
           >
-            <video
-              src={VideoStudentDash}
-              controls
-              preload="metadata"
-              onError={(e) => {
-                console.error('Video loading error:', e);
-              }}
-              onLoadStart={() => {
-                console.log('Video loading started');
-              }}
-              onLoadedData={() => {
-                console.log('Video data loaded');
-              }}
-              style={{
+            <div style={{
+              width: '100%',
+              height: '100%',
+              borderRadius: '0.7rem',
+              overflow: 'hidden',
+              background: '#000',
+              position: 'relative'
+            }}>
+              <div style={{
                 width: '100%',
                 height: '100%',
-                objectFit: 'contain',
-                borderRadius: '0.7rem',
-                background: '#18182a',
-                margin: 0,
-                maxWidth: '100%',
-                maxHeight: '100%'
-              }}
-            />
+                position: 'relative',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}>
+                <iframe 
+                  src="https://player.vimeo.com/video/1107824205?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;controls=1&amp;title=0&amp;byline=0&amp;portrait=0" 
+                  frameBorder="0" 
+                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
+                  referrerPolicy="strict-origin-when-cross-origin" 
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    borderRadius: '0.7rem',
+                    border: 'none'
+                  }} 
+                  title="Video_StudentDash"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </motion.div>

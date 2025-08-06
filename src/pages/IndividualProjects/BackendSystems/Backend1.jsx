@@ -7,7 +7,7 @@ import Button2 from '../../../components/Button2.jsx';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import '../../../styles/Projects/WebDev1.css';
-import VideoDreamStack from '../../../assets/PROJECT/BackendSystems/Video_DreamStack.mp4';
+
 
 const borderColor = 'rgba(85,81,119,1)';
 const borderHover = 'rgba(171,40,250,0.5)';
@@ -272,31 +272,37 @@ const Backend1 = () => {
                boxShadow: hover ? '0 0 20px 0 rgba(171,40,250,0.4)' : 'none',
              }}
            >
-             <video
-               src={VideoDreamStack}
-               controls
-               preload="metadata"
-               onError={(e) => {
-                 console.error('Video loading error:', e);
-               }}
-               onLoadStart={() => {
-                 console.log('Video loading started');
-               }}
-               onLoadedData={() => {
-                 console.log('Video data loaded');
-               }}
-               style={{
-                 width: '100%',
-                 height: '100%',
-                 objectFit: 'contain',
-                 display: 'block',
-                 borderRadius: '0.7rem',
-                 background: '#18182a',
-                 margin: 0,
-                 maxWidth: '100%',
-                 maxHeight: '100%'
-               }}
-             />
+                           <div style={{
+                width: '100%',
+                height: '100%',
+                borderRadius: '0.7rem',
+                overflow: 'hidden',
+                background: '#000',
+                position: 'relative'
+              }}>
+                <div style={{
+                  width: '100%',
+                  height: '100%',
+                  position: 'relative',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}>
+                  <iframe 
+                    src="https://player.vimeo.com/video/1107824283?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;controls=1&amp;title=0&amp;byline=0&amp;portrait=0" 
+                    frameBorder="0" 
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
+                    referrerPolicy="strict-origin-when-cross-origin" 
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      borderRadius: '0.7rem',
+                      border: 'none'
+                    }} 
+                    title="Video_DreamStack"
+                  />
+                </div>
+              </div>
            </div>
          </div>
        </motion.div>
