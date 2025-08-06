@@ -1,0 +1,215 @@
+.start7day-section {
+  background-color: #0A0A1B;
+  padding: 0 0 5rem 0;
+  margin-top: -2rem;
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+
+.blur-effect-top {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(
+    180deg,
+    rgba(171, 40, 250, 0.3) 0%,
+    rgba(171, 40, 250, 0.1) 50%,
+    rgba(171, 40, 250, 0) 100%
+  );
+  filter: blur(40px);
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.start7day-container {
+  position: relative;
+  z-index: 1;
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 8rem 1.25rem 0;
+}
+
+.start7day-content {
+  background: rgba(13, 13, 27, 0.3);
+  backdrop-filter: blur(0.625rem);
+  border: 0.125rem solid rgba(85, 81, 119, 1);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 0;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.start7day-content::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 1.5rem;
+  padding: 0.0625rem;
+  background: linear-gradient(
+    180deg,
+    rgba(171, 40, 250, 0.5),
+    rgba(171, 40, 250, 0.15)
+  );
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.start7day-content:hover {
+  border-color: rgba(171, 40, 250, 0.5);
+  box-shadow: 0 0 1.25rem rgba(171, 40, 250, 0.4);
+  transform: translateY(-0.3125rem);
+}
+
+.start7day-content:hover::before {
+  background: linear-gradient(
+    180deg,
+    rgba(171, 40, 250, 0.8),
+    rgba(171, 40, 250, 0.3)
+  );
+}
+
+.start7day-image {
+  flex: 1;
+  max-width: 50%;
+  margin: 0;
+  height: 100%;
+  position: relative;
+  padding: 1.25rem;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.start7day-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 1rem;
+  display: block;
+  transition: transform 0.3s ease;
+  background: rgba(13, 13, 27, 0.3);
+  border: 0.125rem solid rgba(85, 81, 119, 1);
+  padding: 1.25rem;
+  position: relative;
+}
+
+.start7day-image img::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem;
+  padding: 0.0625rem;
+  background: linear-gradient(
+    180deg,
+    rgba(171, 40, 250, 0.5),
+    rgba(171, 40, 250, 0.15)
+  );
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.start7day-content:hover .start7day-image img {
+  transform: scale(1.03);
+  border-color: rgba(171, 40, 250, 0.5);
+  box-shadow: 0 0 1.25rem rgba(171, 40, 250, 0.4);
+}
+
+.start7day-text {
+  flex: 1;
+  max-width: 50%;
+  padding: 3rem;
+}
+
+.start7day-text h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #FFFFFF;
+}
+
+.start7day-text p {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.start7day-text .subtitle {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  background: linear-gradient(to right, #AB28FA, #7C159F);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 3.125rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(171, 40, 250, 0.3);
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(171, 40, 250, 0.4);
+}
+
+@media (max-width: 48rem) {
+  .start7day-content {
+    flex-direction: column;
+    text-align: left;
+    gap: 1rem;
+  }
+
+  .start7day-image,
+  .start7day-text {
+    max-width: 100%;
+  }
+
+  .start7day-text {
+    padding: 0 2rem 2rem 2rem;
+  }
+
+  .start7day-text h2 {
+    font-size: 2rem;
+  }
+
+  .start7day-text p {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  .start7day-content {
+    gap: 0.5rem;
+  }
+
+  .start7day-text {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+  }
+
+  .start7day-text h2 {
+    font-size: 1.75rem;
+  }
+
+  .start7day-text p {
+    font-size: 1rem;
+  }
+} 

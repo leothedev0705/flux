@@ -1,0 +1,199 @@
+/* WebDevStyle.css - Styles for WebDev1.jsx and WebDev2.jsx */
+
+.webdev-root {
+  min-height: 100vh;
+  background: #0A0A1B;
+  display: flex;
+  flex-direction: column;
+}
+
+.webdev-blur-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.webdev-blur-img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60vw;
+  max-width: 900px;
+  min-width: 180px;
+  opacity: 0.7;
+  filter: blur(2px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.webdev-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 48px 0;
+  margin-top: 48px;
+  position: relative;
+  z-index: 1;
+}
+
+.webdev-flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  background: none;
+  border-radius: 32px;
+  padding: 32px 0;
+  gap: 48px;
+  perspective: 1200px;
+  width: 100%;
+}
+
+.webdev-info {
+  flex: 1;
+  max-width: 520px;
+  text-align: left;
+}
+
+.webdev-title {
+  font-weight: 700;
+  font-size: 2.8rem;
+  color: #fff;
+  margin-bottom: 12px;
+  line-height: 1.1;
+}
+
+.webdev-subheader {
+  color: #bdbdbd;
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+  font-style: italic;
+}
+
+.webdev-description {
+  color: #e0e0e0;
+  font-size: 1.15rem;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.webdev-image-outer {
+  flex: 1.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+}
+
+.webdev-image-card {
+  position: relative;
+  width: 540px;
+  height: 360px;
+  border-radius: 1rem;
+  border: 2px solid rgba(85,81,119,1);
+  background: #18182a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  box-shadow: none;
+}
+.webdev-image-card-hover {
+  border-color: rgba(171,40,250,0.5);
+  box-shadow: 0 0 20px 0 rgba(171,40,250,0.4);
+}
+
+.webdev-image-inner {
+  width: 500px;
+  height: 320px;
+  border-radius: 0.7rem;
+  border: 2px solid rgba(85,81,119,1);
+  background: rgba(13,13,27,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  box-shadow: none;
+}
+.webdev-image-inner-hover {
+  border-color: rgba(171,40,250,0.5);
+  box-shadow: 0 0 20px 0 rgba(171,40,250,0.4);
+}
+
+.webdev-img {
+  width: 95%;
+  height: 90%;
+  object-fit: contain;
+  display: block;
+  border-radius: 0.7rem;
+  background: #18182a;
+  margin: 0;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .webdev-flex-row {
+    flex-direction: column;
+    gap: 24px;
+    padding: 16px 0;
+  }
+  
+  .webdev-info {
+    order: 2;
+    text-align: center !important;
+    max-width: 100%;
+    padding: 0 24px;
+    align-items: center !important;
+    justify-content: center;
+  }
+  
+  .webdev-image-outer {
+    order: 1;
+    flex: 1;
+    margin-bottom: 24px;
+  }
+  
+  .webdev-image-card {
+    width: 95vw !important;
+    max-width: 800px !important;
+    height: 25px !important;
+    min-height: 20px !important;
+  }
+  
+  .webdev-image-inner {
+    width: 90vw !important;
+    max-width: 750px !important;
+    height: 15px !important;
+    min-height: 10px !important;
+  }
+  
+  .webdev-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center 10% !important;
+    border-radius: 0.7rem !important;
+  }
+  
+  .webdev-content {
+    padding: 32px 0;
+    margin-top: 32px;
+  }
+  
+  /* Ensure text elements are centered on mobile */
+  .webdev-info .webdev-title,
+  .webdev-info .webdev-subheader,
+  .webdev-info .webdev-description {
+    text-align: center !important;
+  }
+}

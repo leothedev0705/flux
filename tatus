@@ -1,0 +1,62 @@
+[33m74c0e07[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m Remove large video files to comply with GitHub file size limits
+"src/assets/PROJECT/WebDev/Blingxbeyond \342\200\223 BlingxBeyond - Google Chrome 2025-08-04 01-19-35.mp4"
+src/assets/PROJECT/WebDev/Video_Gym.mp4
+[33m3e258db[m Pushed all to Github
+src/components/Footer.jsx
+[33m4cc8dd8[m Update project files and styles
+SETUP_WHATSAPP.md
+server.js
+src/App.jsx
+src/assets/PROJECT/BackendSystems/DreamStack.jpg
+"src/assets/PROJECT/WebDev/Blingxbeyond \342\200\223 BlingxBeyond - Google Chrome 2025-08-04 01-19-35.mp4"
+src/assets/PROJECT/WebDev/GymWebsite.png
+src/assets/PROJECT/WebDev/LuxuryVacations.png
+src/assets/PROJECT/WebDev/Mockup_GymWebsite.png
+src/assets/PROJECT/WebDev/Mockup_LuxuryVacations.png
+src/assets/PROJECT/WebDev/Video_Gym.mp4
+src/components/ContactUs.jsx
+src/components/Footer.jsx
+src/components/Home/Testimonials.jsx
+src/components/Home/hero.jsx
+src/components/Projects/Images/GymWebsite_Mockup.png
+src/components/Projects/ProjectsContent.jsx
+src/components/Services/ComprehensiveServices.jsx
+src/components/Services/FAQ.jsx
+src/components/Services/OurServices.jsx
+src/components/WhatsApp.jsx
+src/pages/IndividualProjects/BackendSystems/Backend1.jsx
+src/pages/IndividualProjects/WebDev/WebDev3.jsx
+src/pages/Services.jsx
+src/styles/AboutUs.css
+src/styles/Home/Home.css
+src/styles/Home/WhatWeBuild.css
+src/styles/Pricing/PricingHero.css
+src/styles/Projects/ProjectsHero.css
+src/styles/Services/ComprehensiveServices.css
+src/styles/Services/OurServices.css
+src/styles/Services/ServicesHero.css
+[33ma49ee2c[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Updated favicon and title changes
+index.html
+public/favicon.png
+"rcassetsIMPLOGO_SYMBOL.png\357\200\242 \357\200\242publicfavicon.png\357\200\242"
+src/assets/IMP/favicon.png
+src/assets/IMP/favicon2.png
+[33m765dde1[m Update mobile development project pages with responsive layout and footer improvements
+src/components/Footer.jsx
+src/components/Home/OurWork.jsx
+src/components/Projects/ProjectsContent.jsx
+src/pages/IndividualProjects/MobileDev/MobDev.css
+src/pages/IndividualProjects/MobileDev/MobDev1.jsx
+src/pages/IndividualProjects/MobileDev/MobDev2.jsx
+src/pages/IndividualProjects/WebDesign/Design.css
+src/pages/IndividualProjects/WebDesign/Design1.jsx
+src/pages/IndividualProjects/WebDesign/Design2.jsx
+src/pages/IndividualProjects/WebDesign/Design3.jsx
+src/pages/IndividualProjects/WebDev/WebDev1.jsx
+src/pages/IndividualProjects/WebDev/WebDev2.jsx
+src/pages/IndividualProjects/WebDev/WebDev3.jsx
+src/pages/IndividualProjects/WebDev/WebDev4.jsx
+src/pages/IndividualProjects/WebDev/WebDevStyle.css
+src/styles/AboutUs.css
+src/styles/Footer.css
+src/styles/Home/OurWork.css

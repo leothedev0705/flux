@@ -1,0 +1,15 @@
+* {
+  cursor: url('../assets/IMP/LOGO_SYMBOL.png') 16 16, auto !important;
+}
+
+/* For clickable elements, show a pointer version */
+a, 
+button,
+[role="button"],
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+select,
+[onclick] {
+  cursor: url('../assets/IMP/LOGO_SYMBOL.png') 16 16, pointer !important;
+} 

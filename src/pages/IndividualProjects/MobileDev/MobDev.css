@@ -1,0 +1,410 @@
+/* MobDev.css - Styles for MobDev1.jsx and MobDev2.jsx */
+
+.mobdev-root {
+  min-height: 100vh;
+  background: #0A0A1B;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobdev-blur-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.mobdev-blur-img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60vw;
+  max-width: 900px;
+  min-width: 180px;
+  opacity: 0.7;
+  filter: blur(2px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.mobdev-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 48px 0;
+  margin-top: 48px;
+  position: relative;
+  z-index: 1;
+}
+
+.mobdev-flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  background: none;
+  border-radius: 32px;
+  padding: 32px 0;
+  gap: 48px;
+  perspective: 1200px;
+  width: 100%;
+}
+
+.mobdev-info {
+  flex: 1;
+  max-width: 520px;
+  text-align: left;
+}
+
+.mobdev-title {
+  font-weight: 700;
+  font-size: 2.8rem;
+  color: #fff;
+  margin-bottom: 12px;
+  line-height: 1.1;
+}
+
+.mobdev-subheader {
+  color: #bdbdbd;
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+  font-style: italic;
+}
+
+.mobdev-description {
+  color: #e0e0e0;
+  font-size: 1.15rem;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.mobdev-image-outer {
+  flex: 1.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+}
+
+/* Mobile Phone Mockup Styles */
+.mobdev-phone-mockup {
+  position: relative;
+  width: 300px;
+  height: 600px;
+  border-radius: 2.5rem;
+  border: 2px solid rgba(85,81,119,1);
+  background: #18182a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  box-shadow: none;
+}
+
+.mobdev-phone-mockup-hover {
+  border-color: rgba(171,40,250,0.5);
+  box-shadow: 0 0 20px 0 rgba(171,40,250,0.4);
+}
+
+.mobdev-phone-inner {
+  width: 270px;
+  height: 540px;
+  border-radius: 2rem;
+  border: 2px solid rgba(85,81,119,1);
+  background: rgba(13,13,27,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  box-shadow: none;
+  overflow: hidden;
+}
+
+.mobdev-phone-inner-hover {
+  border-color: rgba(171,40,250,0.5);
+  box-shadow: 0 0 20px 0 rgba(171,40,250,0.4);
+}
+
+.mobdev-phone-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 1.5rem;
+  background: #18182a;
+  margin: 0;
+}
+
+/* Mockup Images Section */
+.mobdev-mockup-section {
+  padding: 80px 0;
+  position: relative;
+  z-index: 1;
+  background: #0A0A1B;
+}
+
+/* Blur effect near title */
+.mobdev-mockup-blur-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60vw;
+  max-width: 900px;
+  min-width: 180px;
+  opacity: 0.7;
+  filter: blur(2px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.mobdev-mockup-blur-img {
+  width: 100%;
+  height: auto;
+}
+
+.mobdev-mockup-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.mobdev-mockup-text {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.mobdev-mockup-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+.mobdev-mockup-description {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.mobdev-mockup-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.mobdev-mockup-image-container {
+  flex: 1;
+  max-width: 400px;
+  min-width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobdev-mockup-image {
+  width: 100%;
+  height: auto;
+  max-width: 350px;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mobdev-mockup-image:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+}
+
+/* Bottom pattern */
+.mobdev-mockup-bottom-pattern {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.mobdev-bottom-pattern-img {
+  width: 100%;
+  height: auto;
+  opacity: 0.4;
+}
+
+/* Responsive Design for Mockup Images */
+@media (max-width: 1200px) {
+  .mobdev-mockup-images {
+    gap: 30px;
+  }
+  
+  .mobdev-mockup-image-container {
+    max-width: 350px;
+  }
+  
+  .mobdev-mockup-image {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobdev-mockup-section {
+    padding: 60px 0;
+  }
+  
+  .mobdev-mockup-title {
+    font-size: 2rem;
+  }
+  
+  .mobdev-mockup-description {
+    font-size: 1rem;
+  }
+  
+  .mobdev-mockup-text {
+    margin-bottom: 60px;
+  }
+  
+  .mobdev-mockup-images {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .mobdev-mockup-image-container {
+    max-width: 100%;
+    min-width: auto;
+  }
+  
+  .mobdev-mockup-image {
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mobdev-mockup-section {
+    padding: 40px 0;
+  }
+  
+  .mobdev-mockup-title {
+    font-size: 1.8rem;
+  }
+  
+  .mobdev-mockup-text {
+    margin-bottom: 40px;
+  }
+  
+  .mobdev-mockup-images {
+    gap: 20px;
+  }
+  
+  .mobdev-mockup-image {
+    max-width: 220px;
+  }
+}
+
+/* Legacy styles for other mobile dev projects */
+.mobdev-image-card {
+  position: relative;
+  width: 540px;
+  height: 360px;
+  border-radius: 1rem;
+  border: 2px solid rgba(85,81,119,1);
+  background: #18182a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  box-shadow: none;
+}
+
+.mobdev-image-card-hover {
+  border-color: rgba(171,40,250,0.5);
+  box-shadow: 0 0 20px 0 rgba(171,40,250,0.4);
+}
+
+.mobdev-image-inner {
+  width: 500px;
+  height: 320px;
+  border-radius: 0.7rem;
+  border: 2px solid rgba(85,81,119,1);
+  background: rgba(13,13,27,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  box-shadow: none;
+}
+
+.mobdev-image-inner-hover {
+  border-color: rgba(171,40,250,0.5);
+  box-shadow: 0 0 20px 0 rgba(171,40,250,0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mobdev-flex-row {
+    flex-direction: column;
+    gap: 32px;
+    padding: 16px 0;
+  }
+  
+  .mobdev-info {
+    text-align: center;
+    max-width: 100%;
+  }
+  
+  .mobdev-title {
+    font-size: 2.2rem;
+  }
+  
+  .mobdev-subheader {
+    font-size: 1.1rem;
+  }
+  
+  .mobdev-description {
+    font-size: 1rem;
+  }
+  
+  .mobdev-phone-mockup {
+    width: 280px;
+    height: 560px;
+  }
+  
+  .mobdev-phone-inner {
+    width: 250px;
+    height: 500px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mobdev-phone-mockup {
+    width: 260px;
+    height: 520px;
+  }
+  
+  .mobdev-phone-inner {
+    width: 230px;
+    height: 460px;
+  }
+  
+  .mobdev-title {
+    font-size: 1.8rem;
+  }
+}
