@@ -14,8 +14,9 @@ const ProjectsHero = () => {
             Bringing Ideas to Life
         </h1>
           <p className="hero-description">
-            Explore the digital products we’ve designed, developed, and delivered — with purpose and precision.
+            Explore the digital products we've designed, developed, and delivered — with purpose and precision.
           </p>
+          <div className="hero-spacer"></div>
           <div className="hero-buttons">
             <Button2 to="/contact">Start Your Project</Button2>
             <Button2 to="/services">Our Services</Button2>

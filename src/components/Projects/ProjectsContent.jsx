@@ -115,7 +115,7 @@ const ProjectCard = ({ reverse, index, title, subheader, description, image, isM
   const cardContent = isMobile ? (
     <>
       {/* Image Card */}
-      <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: 24, padding: isVerySmallScreen ? '0 12px' : '0 16px' }}>
+      <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: 40, padding: isVerySmallScreen ? '0 12px' : '0 24px' }}>
         <div
           style={{
             position: 'relative',
@@ -175,7 +175,7 @@ const ProjectCard = ({ reverse, index, title, subheader, description, image, isM
           fontWeight: 700, 
           fontSize: isVerySmallScreen ? '2rem' : window.innerWidth <= 600 ? '2.4rem' : '2.8rem', 
           color: '#fff', 
-          marginBottom: 12, 
+          marginBottom: 16, 
           lineHeight: 1.1, 
           textAlign: 'center' 
         }}>
@@ -185,14 +185,14 @@ const ProjectCard = ({ reverse, index, title, subheader, description, image, isM
           color: '#bdbdbd', 
           fontWeight: 700, 
           fontSize: isVerySmallScreen ? '0.9rem' : window.innerWidth <= 600 ? '1.1rem' : '1.25rem', 
-          marginBottom: 12, 
+          marginBottom: 16, 
           textAlign: 'center', 
           fontStyle: 'italic' 
         }}>{subheader}</div>
         <div style={{ 
           color: '#e0e0e0', 
           fontSize: isVerySmallScreen ? '0.9rem' : window.innerWidth <= 600 ? '1rem' : '1.15rem', 
-          marginBottom: 40, 
+          marginBottom: 60, 
           lineHeight: 1.6, 
           textAlign: 'center' 
         }}>
@@ -355,10 +355,10 @@ const ProjectCard = ({ reverse, index, title, subheader, description, image, isM
         justifyContent: 'center',
         alignItems: 'center',
         maxWidth: 1200,
-        margin: isMobile ? '32px auto' : '48px auto',
+        margin: isMobile ? '60px auto' : '80px auto',
         background: 'none',
         borderRadius: 32,
-        padding: isMobile ? '16px 0' : '32px 0',
+        padding: isMobile ? '24px 0' : '32px 0',
         gap: isMobile ? 16 : 48,
         perspective: isMobile ? 'none' : 1200,
         width: '100%',
@@ -388,8 +388,8 @@ const ProjectsContent = () => {
   const initialSection = sectionMap[sectionParam] || FILTERS[0];
   const [selected, setSelected] = React.useState(initialSection);
   const projects = PROJECTS[selected];
-  const isMobile = useIsMobile();
-  const isVerySmallScreen = useIsVerySmallScreen(490);
+  const isMobile = useIsMobile(900); // Increased breakpoint for better tablet experience
+  const isVerySmallScreen = useIsVerySmallScreen(600); // Increased breakpoint for better phone experience
   
   // Prevent auto-scroll when changing sections
   const handleSectionChange = (newSection) => {
@@ -398,7 +398,7 @@ const ProjectsContent = () => {
     window.scrollTo(0, window.scrollY);
   };
   return (
-    <div style={{ width: '100%', minHeight: '100vh', background: '#0A0A1B', display: 'flex', flexDirection: 'column', alignItems: 'center', position: 'relative', overflow: 'hidden', padding: isMobile ? (isVerySmallScreen ? '0 12px' : '0 16px') : 0 }}>
+    <div style={{ width: '100%', minHeight: '100vh', background: '#0A0A1B', display: 'flex', flexDirection: 'column', alignItems: 'center', position: 'relative', overflow: 'hidden', padding: isMobile ? (isVerySmallScreen ? '0 16px' : '0 24px') : 0 }}>
       {/* Top Blur Effect */}
       <img src={BlurImage} alt="Blur" style={{ position: 'absolute', top: 0, left: '50%', transform: 'translateX(-50%)', width: isMobile ? '90vw' : '60vw', maxWidth: 900, minWidth: 180, opacity: 0.7, filter: 'blur(2px)', zIndex: 0, pointerEvents: 'none' }} />
       {/* Filter Buttons */}
@@ -408,8 +408,8 @@ const ProjectsContent = () => {
           flexDirection: isVerySmallScreen ? 'row' : 'column',
           alignItems: 'center',
           width: '100%',
-          marginTop: 40,
-          marginBottom: 32,
+          marginTop: 60,
+          marginBottom: 50,
           zIndex: 1,
           gap: isVerySmallScreen ? '0.25rem' : '0.5rem',
           flexWrap: isVerySmallScreen ? 'wrap' : 'nowrap',
@@ -530,8 +530,8 @@ const ProjectsContent = () => {
           display: 'flex',
           justifyContent: 'center',
           gap: '1.5rem',
-          marginTop: 80,
-          marginBottom: 64,
+          marginTop: 100,
+          marginBottom: 80,
           zIndex: 1,
           flexWrap: 'nowrap',
           width: 'auto',

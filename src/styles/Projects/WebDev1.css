@@ -121,33 +121,40 @@
 
 @media (max-width: 900px) {
   .webdev1-top-section {
-    gap: 24px;
-    padding: 24px 0;
+    gap: 32px;
+    padding: 32px 0;
+    margin: 80px auto 40px auto;
   }
   .webdev1-image-card {
     width: 90vw;
-    max-width: 450px;
-    height: 250px;
+    max-width: 500px;
+    height: 300px;
   }
   .webdev1-image-inner {
     width: 90vw;
-    max-width: 410px;
-    height: 210px;
+    max-width: 460px;
+    height: 260px;
+  }
+  .webdev1-info-box {
+    padding: 0 20px;
+  }
+  .webdev1-description {
+    margin-bottom: 30px;
   }
 }
 
 @media (max-width: 768px) {
   .webdev1-top-section {
     flex-direction: column;
-    gap: 24px;
-    padding: 24px 0;
+    gap: 40px;
+    padding: 32px 16px;
     margin-top: 80px;
-    margin-bottom: 0; /* Remove bottom margin on mobile */
+    margin-bottom: 40px; /* Add some bottom margin on mobile */
   }
   .webdev1-image-box {
     order: 1;
     width: 100%;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
   }
   .webdev1-info-box {
     order: 2;
@@ -155,23 +162,31 @@
     max-width: 100%;
     text-align: center;
     align-items: center;
-    margin-bottom: 32px;
+    margin-bottom: 40px;
+    padding: 0 16px;
   }
   .webdev1-image-card {
-    width: 100vw;
+    width: 92vw;
     max-width: 500px;
     height: 300px;
   }
   .webdev1-image-inner {
-    width: 100vw;
+    width: 88vw;
     max-width: 460px;
     height: 260px;
   }
+  .webdev1-description {
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
   .webdev1-hero-section {
-    margin-bottom: 0; /* Remove bottom margin on mobile */
+    margin-bottom: 40px; /* Add bottom margin on mobile */
+    padding: 48px 16px;
   }
   .webdev1-walkthrough-section {
-    margin-bottom: 0; /* Remove bottom margin on mobile */
+    margin-bottom: 40px; /* Add bottom margin on mobile */
+    padding: 48px 16px;
   }
   
   /* Flip animation for mobile screens - only when Framer Motion is not active */
@@ -200,6 +215,45 @@
   .webdev1-image-inner {
     transform-style: preserve-3d;
     backface-visibility: hidden;
+  }
+}
+
+/* Very small screens (mobile phones) */
+@media (max-width: 600px) {
+  .webdev1-top-section {
+    padding: 24px 12px;
+    margin-top: 60px;
+    margin-bottom: 30px;
+  }
+  .webdev1-image-card {
+    width: 95vw;
+    max-width: 400px;
+    height: 240px;
+  }
+  .webdev1-image-inner {
+    width: 91vw;
+    max-width: 360px;
+    height: 200px;
+  }
+  .webdev1-info-box {
+    padding: 0 12px;
+    margin-bottom: 30px;
+  }
+  .webdev1-title {
+    font-size: 2rem;
+  }
+  .webdev1-subheader {
+    font-size: 1rem;
+  }
+  .webdev1-description {
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+  }
+  .webdev1-hero-section {
+    padding: 40px 12px;
+  }
+  .webdev1-walkthrough-section {
+    padding: 40px 12px;
   }
 }
 

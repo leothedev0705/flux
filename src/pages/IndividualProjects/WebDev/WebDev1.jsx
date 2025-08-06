@@ -57,7 +57,7 @@ const WebDev1 = () => {
   const navigate = useNavigate();
   
   // Mobile detection hook
-  const useIsMobile = (breakpoint = 768) => {
+  const useIsMobile = (breakpoint = 900) => {
     const [isMobile, setIsMobile] = React.useState(() => window.innerWidth < breakpoint);
     React.useEffect(() => {
       const onResize = () => setIsMobile(window.innerWidth < breakpoint);
@@ -68,7 +68,7 @@ const WebDev1 = () => {
   };
   
   // Very small screen detection hook
-  const useIsVerySmallScreen = (breakpoint = 490) => {
+  const useIsVerySmallScreen = (breakpoint = 600) => {
     const [isVerySmall, setIsVerySmall] = React.useState(() => window.innerWidth <= breakpoint);
     React.useEffect(() => {
       const onResize = () => setIsVerySmall(window.innerWidth <= breakpoint);
@@ -82,11 +82,20 @@ const WebDev1 = () => {
   const isVerySmallScreen = useIsVerySmallScreen();
   
   return (
-    <div style={{ minHeight: '100vh', background: '#0A0A1B', display: 'flex', flexDirection: 'column', padding: isMobile ? (isVerySmallScreen ? '0 12px' : '0 16px') : 0 }}>
+    <div style={{ minHeight: '100vh', background: '#0A0A1B', display: 'flex', flexDirection: 'column', padding: isMobile ? (isVerySmallScreen ? '0 16px' : '0 24px') : 0 }}>
       <Navbar />
       {/* Back Button */}
-      <div style={{ width: '100%', display: 'flex', justifyContent: 'flex-start', alignItems: 'center', padding: '24px 0 0 48px', zIndex: 2 }}>
-        <Button2 onClick={() => navigate('/projects?section=webdev')} style={{ width: 'fit-content', minWidth: '40px' }}>{'< Back to Web Development Projects'}</Button2>
+      <div style={{ 
+        width: '100%', 
+        display: 'flex', 
+        justifyContent: 'flex-start', 
+        alignItems: 'center', 
+        padding: isMobile ? (isVerySmallScreen ? '20px 16px 0' : '24px 24px 0') : '24px 0 0 48px', 
+        zIndex: 2 
+      }}>
+        <Button2 onClick={() => navigate('/projects?section=webdev')} style={{ width: 'fit-content', minWidth: '40px' }}>
+          {isVerySmallScreen ? '< Back to Projects' : '< Back to Web Development Projects'}
+        </Button2>
       </div>
       {/* Blur effect at the top */}
       <div style={{ position: 'relative', width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: 0, marginBottom: 0 }}>
